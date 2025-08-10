@@ -69,15 +69,16 @@ nav .extra a{
 
 .slider-container {
   position: relative;
-  width: 90%;
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 90%;
   margin: 20px auto;
   border-radius: 30px;
+  overflow: hidden;
 }
 
 .slider {
   display: flex;
-  /* transform akan di-set via JS (pixel-based) */
+  will-change: transform;
 }
 
 .slide {
