@@ -136,29 +136,29 @@ nav .extra a{
         display: flex;
         width: 30px;
     }
-    .side{
-    position: absolute;
+.side {
+    position: fixed; /* dari absolute jadi fixed */
     top: 70px;
+    right: 0;
     width: 300px;
- 
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     background-color: var(--black);
     padding: 20px;
-    border-radius:20px ;
+    border-radius: 20px 0 0 20px;
     transition: 0.5s;
     opacity: 0;
-    transform: translateX(470px);
-    z-index: 5;
-    
+    transform: translateX(100%); /* sembunyi penuh di kanan */
+    z-index: 999;
 }
-    .active{
-        opacity: 1;
-        transform: translateX(170px);
-    }
-.side a{
+
+.side.active {
+    opacity: 1;
+    transform: translateX(0); /* geser masuk */
+}
+
+.side a {
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -167,10 +167,12 @@ nav .extra a{
     margin: 10px;
     color: var(--white);
 }
-#menu{
+
+#menu {
     padding: 5px;
     transition: 0.3s ease;
 }
+
 .slider p{
     display: none;
 }
