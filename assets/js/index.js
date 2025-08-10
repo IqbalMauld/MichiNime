@@ -113,10 +113,13 @@ async function initSlider() {
         startX = e.clientX;
         slider.style.transition = 'none';
         container.setPointerCapture(e.pointerId);
-    });
-
-    container.addEventListener('pointermove', (e) => {
+        e.preventDefault()
+        
+      });
+      
+      container.addEventListener('pointermove', (e) => {
         if (!isDragging) return;
+        e.preventDefault()
         const dx = e.clientX - startX;
         const w = container.clientWidth;
         slider.style.transform = `translateX(${ -currentIndex * w + dx }px)`;
