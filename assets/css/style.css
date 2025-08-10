@@ -78,11 +78,11 @@ nav .extra a{
 
 .slider {
   display: flex;
-  will-change: transform;
 }
 
 .slide {
-  width: 100%;
+ min-width: 100%;
+ overflow-x: hidden;
   box-sizing: border-box;
   height: 500px;
   display: flex;
