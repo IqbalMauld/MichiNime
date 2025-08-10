@@ -137,7 +137,7 @@ nav .extra a{
         width: 30px;
     }
 .side {
-    position: fixed; /* dari absolute jadi fixed */
+    position: fixed;
     top: 70px;
     right: 0;
     width: 300px;
@@ -147,13 +147,15 @@ nav .extra a{
     background-color: var(--black);
     padding: 20px;
     border-radius: 20px 0 0 20px;
-    transition: 0.5s;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
+    transform: translateX(100%);
     z-index: 999;
 }
 
 .side.active {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .side a {
@@ -164,6 +166,7 @@ nav .extra a{
     border: 1px solid var(--primary);
     margin: 10px;
     color: var(--white);
+}
 }
 
 #menu {
