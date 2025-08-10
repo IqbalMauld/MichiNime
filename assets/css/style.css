@@ -149,13 +149,11 @@ nav .extra a{
     border-radius: 20px 0 0 20px;
     transition: 0.5s;
     opacity: 0;
-    transform: translateX(100%); /* sembunyi penuh di kanan */
     z-index: 999;
 }
 
 .side.active {
     opacity: 1;
-    transform: translateX(0); /* geser masuk */
 }
 
 .side a {
