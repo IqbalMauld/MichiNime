@@ -81,7 +81,7 @@ nav .extra a{
 }
 
 .slide {
-  min-width: 100%;
+  width: 100%;
   box-sizing: border-box;
   height: 500px;
   display: flex;
