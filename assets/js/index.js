@@ -125,18 +125,26 @@ async function initSlider() {
         slider.style.transform = `translateX(${ -currentIndex * w + dx }px)`;
     });
 
-    function endDrag(e) {
-        if (!isDragging) return;
-        isDragging = false;
-        const dx = e.clientX - startX;
-        const w = container.clientWidth;
-        const threshold = w * 0.18;
-        slider.style.transition = 'transform 0.45s ease';
-        if (dx > threshold) changeSlide(-1);
-        else if (dx < -threshold) changeSlide(1);
-        else setPosition(true);
-        try { container.releasePointerCapture(e.pointerId); } catch {}
+function endDrag(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    const dx = e.clientX - startX;
+    const w = container.clientWidth;
+    const threshold = w * 0.18;
+    slider.style.transition = 'transform 0.45s ease';
+
+    if (dx > threshold) {
+        // Geser ke kiri (slide sebelumnya)
+        currentIndex--;
+    } else if (dx < -threshold) {
+        // Geser ke kanan (slide berikutnya)
+        currentIndex++;
     }
+    setPosition(true);
+
+    try { container.releasePointerCapture(e.pointerId); } catch {}
+}
+
 
     container.addEventListener('pointerup', endDrag);
     container.addEventListener('pointercancel', endDrag);
