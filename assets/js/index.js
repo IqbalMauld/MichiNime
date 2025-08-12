@@ -152,3 +152,19 @@ function endDrag(e) {
 }
 
 initSlider();
+
+
+// const latest = document.querySelector('.latest');
+
+// async function showLatest() {
+//     const items = await fetchNime();
+//     items.forEach((item) => {
+//         let div = document.createElement('div');
+//         div.style.backgroundImage = `url("${item.poster}")`;
+//         div.innerHTML = `
+//           <h1>${item.title}</h1>
+//           <p>${item.description}</p>
+//         `;
+//         slider.appendChild(div);
+//     });
+// }

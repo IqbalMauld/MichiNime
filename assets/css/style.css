@@ -117,7 +117,22 @@ nav .extra a{
 }
 
 
-
+/* Latest */
+.latest{
+    width: 100%;
+    height: auto;
+    background-color: red;
+}
+.latestupd{
+    width: 100%;
+    display: flex;
+    sc
+}
+.latest div{
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 200px;
+}
 
 
 /* Media QUeries */
@@ -137,9 +152,9 @@ nav .extra a{
         width: 30px;
     }
 .side {
-    position: fixed;
+    position: absolute;
     top: 70px;
-    right: 0;
+    right: -600px;
     width: 300px;
     display: flex;
     align-items: center;
@@ -147,15 +162,14 @@ nav .extra a{
     background-color: var(--black);
     padding: 20px;
     border-radius: 20px 0 0 20px;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: 1s ease;
     opacity: 0;
-    transform: translateX(100%);
     z-index: 999;
 }
 
 .side.active {
     opacity: 1;
-    transform: translateX(0);
+    right: 0;
 }
 
 .side a {
@@ -167,8 +181,6 @@ nav .extra a{
     margin: 10px;
     color: var(--white);
 }
-}
-
 #menu {
     padding: 5px;
     transition: 0.3s ease;
@@ -185,6 +197,7 @@ nav .extra a{
     font-size: 20px;
 }
 }
+
 
 
 
