@@ -154,7 +154,7 @@ nav .extra a{
 .side {
     position: absolute;
     top: 70px;
-    right: -600px;
+    right: 0;
     width: 300px;
     display: flex;
     align-items: center;
